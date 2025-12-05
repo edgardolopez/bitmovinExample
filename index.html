@@ -35,7 +35,7 @@
             }
         };
 
-        /*
+
         const source = {
             hls: './video/manifest.m3u8',
             title: 'Art of Motion',
@@ -46,16 +46,16 @@
                     id: 'en',
                     kind: 'subtitles',
                     lang: 'en',
-                    enabled: true // 👈 Subtitles OFF by default
+                    enabled: true
                 }
             ]
-        };*/
-
-        var source = {
-          hls: 'https://cdn.bitmovin.com/content/assets/sintel/hls/playlist.m3u8',
-          poster: 'https://cdn.bitmovin.com/content/assets/sintel/poster.png'
         };
-        
+
+        // var source = {
+        //   hls: 'https://cdn.bitmovin.com/content/assets/sintel/hls/playlist.m3u8',
+        //   poster: 'https://cdn.bitmovin.com/content/assets/sintel/poster.png'
+        // };
+
         const player = new bitmovin.player.Player(document.getElementById('player'), config);
 
         player.load(source).then(() => {
